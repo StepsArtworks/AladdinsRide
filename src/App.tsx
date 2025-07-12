@@ -43,7 +43,8 @@ function App() {
     { id: '160x230', name: '160×230 cm', description: 'Perfect for living rooms and bedrooms' },
     { id: '200x300', name: '200×300 cm', description: 'Ideal for larger spaces and dining areas' },
     { id: '240x340', name: '240×340 cm', description: 'Premium statement pieces for grand spaces' },
-    { id: '300x400', name: '300×400 cm', description: 'Statement pieces for grand rooms' }
+    { id: '300x400', name: '300×400 cm', description: 'Statement pieces for grand rooms' },
+    { id: '300x500', name: '300×500 cm', description: 'Magnificent oversized masterpieces for palatial spaces' }
   ];
 
   // Collections for each main rug
@@ -300,10 +301,10 @@ function App() {
         id: `premium-statement-${i + 54}`,
         name: `Premium Statement ${i + 1}`,
         images: [
-          'https://tbrhub.com/aladdinsride/images/240x340/55.jpg',
-          'https://tbrhub.com/aladdinsride/images/240x340/55-1.jpg',
-          'https://tbrhub.com/aladdinsride/images/240x340/55-2.jpg',
-          'https://tbrhub.com/aladdinsride/images/240x340/55-3.jpg'
+          i === 0 ? 'https://tbrhub.com/aladdinsride/images/240x340/54.jpg' : 'https://tbrhub.com/aladdinsride/images/240x340/55.jpg',
+          i === 0 ? 'https://tbrhub.com/aladdinsride/images/240x340/54-1.jpg' : 'https://tbrhub.com/aladdinsride/images/240x340/55-1.jpg',
+          i === 0 ? 'https://tbrhub.com/aladdinsride/images/240x340/54-2.jpg' : 'https://tbrhub.com/aladdinsride/images/240x340/55-2.jpg',
+          i === 0 ? 'https://tbrhub.com/aladdinsride/images/240x340/54-3.jpg' : 'https://tbrhub.com/aladdinsride/images/240x340/55-3.jpg'
         ],
         price: 'R 64,999',
         material: 'Silk & Cashmere',
@@ -311,6 +312,30 @@ function App() {
         stock: Math.floor(Math.random() * 8) + 3,
         productNumber: `AR-${String(i + 54).padStart(3, '0')}`
       }))
+    },
+    'palatial-masterpiece': {
+      name: 'Palatial Masterpiece Collection',
+      description: 'Magnificent oversized rugs that define luxury and grandeur, perfect for the most prestigious spaces and grand halls.',
+      material: 'Silk & Cashmere',
+      origin: 'Iran',
+      size: '300×500 cm',
+      rugs: [
+        {
+          id: 'palatial-masterpiece-71',
+          name: 'Palatial Masterpiece 1',
+          images: [
+            'https://tbrhub.com/aladdinsride/images/300x500/71.jpg',
+            'https://tbrhub.com/aladdinsride/images/300x500/71-1.jpg',
+            'https://tbrhub.com/aladdinsride/images/300x500/71-2.jpg',
+            'https://tbrhub.com/aladdinsride/images/300x500/71-3.jpg'
+          ],
+          price: 'R 89,999',
+          material: 'Silk & Cashmere',
+          origin: 'Iran',
+          stock: Math.floor(Math.random() * 8) + 3,
+          productNumber: 'AR-071'
+        }
+      ]
     },
   };
 
@@ -449,6 +474,25 @@ function App() {
         collectionKey: 'grand-majesty',
         productNumber: 'AR-030'
       },
+    ],
+    '300x500': [
+      {
+        id: '300x500-1',
+        name: 'Palatial Masterpiece',
+        size: '300×500 cm',
+        price: 'R 89,999',
+        images: [
+          'https://tbrhub.com/aladdinsride/images/300x500/71.jpg',
+          'https://tbrhub.com/aladdinsride/images/300x500/71-1.jpg',
+          'https://tbrhub.com/aladdinsride/images/300x500/71-2.jpg',
+          'https://tbrhub.com/aladdinsride/images/300x500/71-3.jpg'
+        ],
+        description: 'Magnificent oversized rugs that define luxury and grandeur, perfect for the most prestigious spaces and grand halls.',
+        material: 'Silk & Cashmere',
+        origin: 'Iran',
+        collectionKey: 'palatial-masterpiece',
+        productNumber: 'AR-071'
+      }
     ]
   };
 
